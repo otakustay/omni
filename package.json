@@ -1,0 +1,39 @@
+{
+  "name": "@otakustay/omni",
+  "version": "1.0.0",
+  "description": "I'm tired of copy &amp; paste, now I need a package for my utilities",
+  "type": "module",
+  "scripts": {
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "lint": "eslint src",
+    "lint-staged": "lint-staged",
+    "build": "rm -rf dist && echo 'build success'",
+    "test": "echo 'test success'",
+    "ci": "yarn install --immutable && npm run build && npm run test"
+  },
+  "keywords": [
+    "util"
+  ],
+  "author": "otakustay",
+  "license": "MIT",
+  "packageManager": "yarn@3.6.3",
+  "devDependencies": {
+    "@babel/core": "^7.22.19",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/eslint-plugin": "^7.22.10",
+    "@ecomfe/eslint-config": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "pinst": "^3.0.0",
+    "semantic-release": "^21.1.1",
+    "typescript": "^5.2.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
